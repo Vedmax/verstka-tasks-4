@@ -1,0 +1,134 @@
+@font-face
+{
+    font-family: myFont;
+    src: url("GenzschEtHeyseAlt.ttf");
+}
+
+@font-face
+{
+    font-family: muFirstLetterFont;
+    src: url("AlexBrush-Regular.ttf");
+}
+
+@font-face
+{
+    font-family: headlineFont;
+    src: url("boston_traffic.ttf");
+}
+
+@font-face
+{
+    font-family: regularText;
+    src: url("BreeSerif-Regular.otf");
+}
+
+body
+{
+    font-family: regularText, arial, sans-serif;
+    background: url(old-paper-background-texture.jpg);
+}
+
+div .first,
+div .second
+{
+    display: inline;
+}
+
+main div
+{
+    float: left;
+    height: 100%
+}
+
+.first
+{
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    column-count: 3;
+    -webkit-column-rule: 2px solid #000;
+    -webkit-column-count: 3;
+    text-align: justify;
+    padding-right: 10px;
+    border-right: 2px double #000;
+    width: 55%;
+}
+
+.second
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    column-count: 2;
+    -webkit-column-rule: 2px solid #000;
+    -webkit-column-count: 2;
+    text-align: justify;
+    width: 40%;
+}
+
+main article img
+{
+    width: 100%;
+}
+
+header
+{
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+header h1
+{
+    font-family: myFont, sans-serif;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+header h2
+{
+    font-family: regularText, arial, sans-serif;
+    font-size: smaller;
+    padding: 10px;
+    border-bottom: double 5px;
+    border-top: double 5px;
+    border-bottom-color: #000000;
+}
+
+article h1
+{
+    margin: 10px;
+    text-align: center;
+    font-family: headlineFont, arial, sans-serif;
+    text-shadow: 1px 1px #000;
+    break-inside: avoid-column;
+    -webkit-column-break-inside: avoid;
+}
+
+article p:first-letter
+{
+    font-family: muFirstLetterFont, sans-serif;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-size: 40px;
+}
+
+.second .important
+{
+    -webkit-column-span: all;
+    column-span: all;
+    font-size: larger;
+}
+
+.second .important h1
+{
+    border-top: solid #000;
+    border-bottom: solid #000;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.second .important p
+{
+    padding-left: 20px;
+    padding-right: 20px;
+}
