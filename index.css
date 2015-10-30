@@ -26,6 +26,7 @@ body
 {
     font-family: regularText, arial, sans-serif;
     background: url(old-paper-background-texture.jpg);
+    background-repeat: round;
 }
 
 div .first,
