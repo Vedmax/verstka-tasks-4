@@ -35,10 +35,38 @@ div .second
     display: inline;
 }
 
+#size
+{
+    margin-left: -10%;
+}
+
+#font
+{
+    position: inherit;
+}
+
+label[for="size"]
+{
+    padding-right: 5px;
+    border-right: solid 3px #000;
+}
+
+#size:checked ~ div
+{
+    font-size: larger;
+}
+
+#font:checked ~ div article,
+#font:checked ~ div article h1,
+#font:checked ~ div article p:first-letter
+{
+    font-family: arial, sans-serif;
+}
+
 main div
 {
     float: left;
-    height: 100%
+    margin-top: 40px;
 }
 
 .first
