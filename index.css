@@ -22,54 +22,70 @@
     src: url("BreeSerif-Regular.otf");
 }
 
-body
+.paper
 {
     font-family: regularText, arial, sans-serif;
     background: url(old-paper-background-texture.jpg);
-    background-repeat: round;
+    background-size: cover;
 }
 
-div .first,
-div .second
+.paper .first,
+.paper .second
 {
     display: inline;
 }
 
-#size
-{
-    margin-left: -10%;
-}
 
 #font
 {
     position: inherit;
 }
 
-label[for="size"]
+label[for="size"],
+label[for="extraFont"]
 {
-    padding-right: 5px;
+    padding-right: 10px;
     border-right: solid 3px #000;
 }
 
-#size:checked ~ div
+#size:checked ~ .paper
 {
     font-size: larger;
 }
 
-#font:checked ~ div article,
-#font:checked ~ div article h1,
-#font:checked ~ div article p:first-letter
+#theme:checked ~ .paper
+{
+    background: url(staraya_zheltaya_bumaga_2560x1600.jpg);
+    color: #fff;
+}
+
+#theme:checked ~ .paper div,
+#theme:checked ~ .paper header h2,
+#theme:checked ~ .paper .important h1
+{
+    -webkit-column-rule-color: #fff;
+    border-color: #fff;
+}
+
+#font:checked ~ .paper article,
+#font:checked ~ .paper article h1,
+#font:checked ~ .paper header h1,
+#font:checked ~ .paper header h2,
+#font:checked ~ .paper article p:first-letter
 {
     font-family: arial, sans-serif;
 }
 
-main div
+#extraFont:checked ~ .paper article,
+#extraFont:checked ~ .paper article h1,
+#extraFont:checked ~ .paper header h1,
+#extraFont:checked ~ .paper header h2,
+#extraFont:checked ~ .paper article p:first-letter
 {
-    float: left;
-    margin-top: 40px;
+    font-family: Monaco, cursive;
 }
 
-.first
+.paper .first
 {
     float: left;
     margin-left: 10px;
@@ -83,8 +99,9 @@ main div
     width: 55%;
 }
 
-.second
+.paper .second
 {
+    float: left;
     margin-left: 10px;
     margin-right: 10px;
     column-count: 2;
@@ -94,26 +111,30 @@ main div
     width: 40%;
 }
 
+main .paper
+{
+    float: left;
+}
+
 main article img
 {
     width: 100%;
 }
 
-header
+.paper header
 {
     margin-top: 20px;
     text-align: center;
-
 }
 
-header h1
+.paper header h1
 {
     font-family: myFont, sans-serif;
     font-size: 60px;
     font-weight: 600;
 }
 
-header h2
+.paper header h2
 {
     font-family: regularText, arial, sans-serif;
     font-size: smaller;
@@ -123,7 +144,7 @@ header h2
     border-bottom-color: #000000;
 }
 
-article h1
+.paper h1
 {
     margin: 10px;
     text-align: center;
@@ -133,7 +154,7 @@ article h1
     -webkit-column-break-inside: avoid;
 }
 
-article p:first-letter
+.paper p:first-letter
 {
     font-family: muFirstLetterFont, sans-serif;
     font-weight: bold;
@@ -141,14 +162,14 @@ article p:first-letter
     font-size: 40px;
 }
 
-.second .important
+.paper .second .important
 {
     -webkit-column-span: all;
     column-span: all;
     font-size: larger;
 }
 
-.second .important h1
+.paper .second .important h1
 {
     border-top: solid #000;
     border-bottom: solid #000;
@@ -156,7 +177,7 @@ article p:first-letter
     padding: 10px;
 }
 
-.second .important p
+.paper .second .important p
 {
     padding-left: 20px;
     padding-right: 20px;
